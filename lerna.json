@@ -1,0 +1,16 @@
+{
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "packages": ["packages/*", "apps/*"],
+  "command": {
+    "version": {"exact": true},
+    "publish": {
+      "conventionalCommits": true,
+      "message": "chore(release): publish",
+      "ignoreChanges": ["**/stories/**", "**/tests/**"],
+      "allowBranch": ["master"],
+      "registry": "https://registry.npmjs.org/"
+    }
+  },
+  "version": "independent"
+}
